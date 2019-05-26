@@ -1,5 +1,5 @@
 Dependencies for Project 'example', Target 'Project': (DO NOT MODIFY !)
-F (..\..\App\src\main.c)(0x5CE9FCDB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\App\inc -I ..\..\Board\inc -I ..\..\Core -I ..\..\Libraries\inc-I.\RTE\_Project-I"D:\Keil5 MDK\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-I"D:\Keil5 MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\..\App\src\main.c)(0x5CEA05F7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\App\inc -I ..\..\Board\inc -I ..\..\Core -I ..\..\Libraries\inc-I.\RTE\_Project-I"D:\Keil5 MDK\ARM\PACK\Keil\STM32F1xx_DFP\1.1.0\Device\Include"-I"D:\Keil5 MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\..\App\inc\stm32f10x.h)(0x4D783CB4)
 I (..\..\Core\core_cm3.h)(0x5BC48F1E)
 I (D:\Keil5 MDK\ARM\ARMCC\include\stdint.h)(0x599EDB3E)

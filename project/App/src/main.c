@@ -35,7 +35,9 @@ int main()
 	OLED_Clear();
 	
 	GPIO_ResetBits(GPIOB, GPIO_Pin_8);
-	TIM_SetCompare3(GENERAL_TIM, 0);
+	TIM_SetCompare3(GENERAL_TIM, 0);//¹Ø±Õ·äÃùÆ÷
+	TIM_SetCompare3(ADVANCED_TIM, 0);
+	TIM_SetCompare4(GENERAL_TIM, 0);
 	while (1)
 	{
 		if (Mode==-1)
@@ -71,18 +73,21 @@ int main()
 			if (Vol_Value <= Warning_Value)
 			{
 					GPIO_SetBits(GPIOB, GPIO_Pin_8);
-				TIM_SetCompare3(GENERAL_TIM, 10000);
-				TIM_SetCompare4(GENERAL_TIM, 0);
+				for (i=0; i<7; i++)
+				{
+					TIM_SetCompare3(GENERAL_TIM, 10000);
+					TIM_SetCompare4(ADVANCED_TIM, 5000);
+					delay_ms(200);
+					TIM_SetCompare4(ADVANCED_TIM, 0);
+					delay_ms(50);
+				}
 				TIM_SetCompare4(ADVANCED_TIM, 5000);
-				TIM_SetCompare3(ADVANCED_TIM, 0);
 			}
 			else
 			{
 				GPIO_ResetBits(GPIOB, GPIO_Pin_8);
 				TIM_SetCompare3(GENERAL_TIM, 0);
-				TIM_SetCompare4(GENERAL_TIM, 0);
 				TIM_SetCompare4(ADVANCED_TIM, 0);
-				TIM_SetCompare3(ADVANCED_TIM, 0);
 			}
 				
 			temp = Vol_Value;
@@ -105,7 +110,7 @@ int main()
 			OLED_ShowChar(48+i*8, 4, '0', 16); 
 			if (iLen>0) OLED_ShowNum(48+i*8, 4, temp, iLen, 16);
 			OLED_ShowChar(96, 4, 'V', 16);
-			delay_ms(800);
+			delay_ms(600);
 		}
 	}
 }
