@@ -93,8 +93,10 @@ float Adc_Get_Average(uint8_t ch,uint8_t Times)		//计算 ADC 的平均值
 	uint8_t t;
 	
 	for(t=0;t<Times;t++)
+	{
 		temp_val+=Adc_Get(ch);
-	
+		delay_ms(5);
+	}
 	return (temp_val/Times);		//求平均
 }
 
